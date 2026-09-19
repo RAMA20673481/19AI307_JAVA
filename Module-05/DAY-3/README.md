@@ -1,57 +1,61 @@
-# Ex.No:5(D) IS-A RELATIONSHIP AND HAS-A RELATIONSHIP
+# Ex.No:5(C)    GETTER AND SETTER METHOD
+
 ## AIM:
-   To Create a java program to find factorial of number using class and object concepts and apply the has-a relationship.
- 
+To Create a java program to print the sum of two number using getter and setter method.
+
 ## ALGORITHM :
-1.	Start the Program
-2.	Define class `A`:
--	a) Declare integer `n` and initialize `fact` to 1
--	b) Define method `factorial(int n)`:
--	i) Set `this.n = n`
--	ii) Use a loop from 1 to `n` to calculate `fact = fact * i`
--	iii) Print "Factorial is:" followed by `fact`
+1.  Start the Program
+2.	Define class `Employee`:
+-	a) Private variables `n1` and `n2`
+-	b) Method `setsum(int n1, int n2)` to set values of `n1` and `n2`
+-	c) Method `getsum()` to calculate and print `sum = n1 + n2`
 3.	In `main` class `main` method:
--	a) Use `Scanner` to read integer `n`
--	b) Create an `A` object and call `factorial(n)`
+-	a) Use `Scanner` to read integers `n1` and `n2`
+-	b) Create ` Employee ` object, set values, and call `getsum()`
 4.	End
+
 
 ## PROGRAM:
  ```
-Program to implement a IS-A RELATIONSHIP AND HAS-A RELATIONSHIP using Java
+Program to implement a Getter and Setter using Java
 Developed by: kirthick sha R
 RegisterNumber:  212224230124
 ```
 
 ## Sourcecode.java:
+
 ```java
 import java.util.Scanner;
 
-class A
+class Employee
 {
-    int n;
-    int fact = 1;
+    private int n1;
+    private int n2;
 
-    void factorial(int n)
+    public void setsum(int n1, int n2)
     {
-        this.n = n;
+        this.n1 = n1;
+        this.n2 = n2;
+    }
 
-        for (int i = 1; i <= n; i++)
-        {
-            fact = fact * i;
-        }
+    public void getsum()
+    {
+        int sum = n1 + n2;
 
-        System.out.println("Factorial is: " + fact);
+        System.out.println("Sum = " + sum);
     }
 
     public static void main(String args[])
     {
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
+        int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
 
-        A obj = new A();
+        Employee emp = new Employee();
 
-        obj.factorial(n);
+        emp.setsum(n1, n2);
+        emp.getsum();
 
         sc.close();
     }
@@ -62,12 +66,16 @@ class A
 
 
 
-
 ## OUTPUT:
-<img width="583" height="136" alt="image" src="https://github.com/user-attachments/assets/7889fe04-f2a3-424a-a920-5c7bc0f4878e" />
 
+<img width="696" height="191" alt="image" src="https://github.com/user-attachments/assets/ec8e4119-9da6-4802-b51d-567214715fb7" />
 
 
 ## RESULT:
-Thus the java program to find factorial of number using class and object concepts and apply the has-a relationship was executed successfully.
+Thus the java program to print the sum of two number using getter and setter method was executed successfully.
+
+
+
+
+
 
